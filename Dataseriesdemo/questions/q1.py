@@ -22,14 +22,13 @@ if __name__ == "__main__":
 '''
 
 Studentid = ("L12345", "L54321")
+
 modulesubject = ["Java_programming", "Python_Scripting"]
 module1 = {"L12345":40, "L54321":70}
 module2 = {"L12345":69, "L54321":58}
 
 s_id = input("Enter the studentid_number:")
-if s_id == "L12345":
- s_id = 0
+index = Studentid.index(s_id)
 
-elif s_id == "L54321":
- s_id = 1
-print(modulesubject[s_id])
+print("Student ID - {} | Subject - {} | Module 1 Grade - {} | Module 2 Grade - {}".
+      format(s_id, modulesubject[index], module1.get(s_id), module2.get(s_id)))
